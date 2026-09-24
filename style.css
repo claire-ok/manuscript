@@ -1,0 +1,42 @@
+html {
+	font-family: 'barlow';
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+body {
+	padding: 10rem;
+}
+
+* {
+	margin-block-start: 1rem;
+}
+
+h1 {
+	font-family: 'Limelight';
+	font-size: 4.6rem;
+	line-height: 6rem;
+}
+
+h1::first-line{
+	font-size: 7rem;
+}
+
+h2 {
+	font-family: barlow;
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding-top: 2rem;
+}
+
+a{
+	text-decoration: underline;
+}
+
+em {
+	font-style: italic;
+}
+
+.original-article {
+	padding-bottom: 1.5rem;
+}
