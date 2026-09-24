@@ -2,6 +2,8 @@ html {
 	font-family: 'barlow';
 	font-size: 1.2rem;
 	line-height: 1.5;
+	background-color: #111111;
+	color: #a9a9a9;
 }
 
 body {
@@ -12,31 +14,94 @@ body {
 	margin-block-start: 1rem;
 }
 
-h1 {
+hgroup {
+	text-align: le;
 	font-family: 'Limelight';
-	font-size: 4.6rem;
-	line-height: 6rem;
+	line-height: 5rem;
+	color: white;
 }
 
-h1::first-line{
+hgroup p {
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+
+hgroup h1::first-line{
 	font-size: 7rem;
+	line-height: 4rem;
+}
+
+.Auto-Tune {
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Auto-Tune .line {
+  display: inline-block;
+  width: 50rem;
+  height: 0.5rem;
+  background-color: white;
+}
+
+.main-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	display: flex;
+}
+
+.main-nav a {
+	padding-right: 1rem;
 }
 
 h2 {
 	font-family: barlow;
-	font-size: 1.5rem;
+	font-size: 2rem;
 	font-weight: 600;
-	padding-top: 2rem;
+	color: white;
+	margin-top: 6rem;
+	background-color: #828282;
 }
 
-a{
+.original-article {
+	text-align: end;
+	font-size: 0.8rem;
+}
+
+blockquote {
+	font-size: 1.3rem;
+	font-weight: bold;
+	border-left: 0.3rem solid #538aff;
+	padding-left: 1rem;
+}
+
+a {
 	text-decoration: underline;
+	color: #f4f4f4;
 }
 
 em {
 	font-style: italic;
 }
 
+kbd {
+  border-radius: 3px;
+  padding: 1px 2px 0;
+  border: 1px solid #a9a9a9;
+}
+
+strong {
+	font-weight: 600;
+}
+
 .original-article {
 	padding-bottom: 1.5rem;
+}
+
+footer{
+	font-size: 0.8rem;
+	padding-block: 3rem;
 }
