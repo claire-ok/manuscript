@@ -1,14 +1,22 @@
+:root{
+	--bg-color: #111111;
+	--text-color:#a9a9a9;
+	--font-family: 'barlow';
+	--font-size: 1.2rem;
+	--line-height:1.5;
+	--spacing:1rem;
+}
+
 html {
-	font-family: 'barlow';
-	font-size: 1.2rem;
-	line-height: 1.5;
-	background-color: #111111;
-	color: #a9a9a9;
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+	line-height: var(--line-height);
+	background-color: var(--bg-color);
+	color: var(--text-color);
 }
 
 article {
-	padding-left: 10rem;
-	padding-right: 10rem;
+	padding-inline: 10rem;
 }
 
 * {
@@ -19,13 +27,7 @@ hgroup {
 	padding: 1rem;
 	font-family: 'Limelight';
 	text-align: center;
-	line-height: 5rem;
 	color: white;
-}
-
-hgroup p {
-	font-size: 1.25rem;
-	line-height: 2rem;
 }
 
 hgroup h1::first-line{
@@ -33,52 +35,58 @@ hgroup h1::first-line{
 	line-height: 4rem;
 }
 
+.Sub-h1 {
+	font-size: 2rem;
+}
+
 .Auto-Tune {
-  font-size: 4rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	font-size: 4rem;
+	display: inline-block;
+	align-items: center;
+	gap: 1rem;
 }
 
 .Auto-Tune .line {
-  display: inline-block;
-  width: 50rem;
-  height: 0.5rem;
-  background-color: white;
+	display: inline-block;
+	width: 30rem;
+	height: 0.2rem;
+	margin: 1rem;
+	background-color: white;
 }
 
 .main-nav {
 	margin: 0;
-	padding-left: 10rem;
-	padding-right: 10rem;
+	padding-inline: 10rem;
 	list-style: none;
-
 	display: flex;
 }
 
 .main-nav a {
-	padding-right: 1rem;
+	padding-inline-end: 1rem;
+}
+
+header {
+	margin-block-end: calc(var(--spacing)*2);
 }
 
 h2 {
-	font-family: barlow;
 	font-size: 2rem;
 	font-weight: 600;
+	margin-block-start: 6rem;
 	color: white;
-	margin-top: 6rem;
 	background-color: #828282;
 }
 
 .original-article {
-	text-align: end;
+	display: inline-end;
 	font-size: 0.8rem;
 }
 
 blockquote {
 	font-size: 1.3rem;
 	font-weight: bold;
-	border-left: 0.3rem solid #538aff;
-	padding-left: 1rem;
+	border-inline-start: 0.3rem solid #538aff;
+	padding-inline-start: var(--spacing);
 }
 
 a {
@@ -92,8 +100,9 @@ em {
 
 kbd {
   border-radius: 3px;
-  padding: 1px 2px 0;
-  border: 1px solid #a9a9a9;
+  padding-inline: 0.2rem;
+  padding-block: 0.1rem;
+  border: 0.1rem solid #a9a9a9;
 }
 
 strong {
@@ -107,6 +116,5 @@ strong {
 footer{
 	font-size: 0.8rem;
 	padding-block: 3rem;
-	padding-left: 10rem;
-	padding-right: 10rem;
+	padding-inline: 10rem;
 }
