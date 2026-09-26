@@ -74,12 +74,16 @@ h2 {
 	font-size: calc(var(--font-size)*2);
 	font-weight: 800;
 	margin-block-start: 6rem;
-	padding-inline-start: calc(var(--spacing)*0.6);
 	color: white;
 }
 
+.author {
+	color: #626262;
+	font-size: calc(var(--font-size)*0.8);
+}
+
 .og-article-author {
-	font-size: var(--font-size);
+	font-size: calc(var(--font-size)*0.8);
 	margin-block: 2rem;
 	border-style: solid;
 	border: 0.05rem solid #a9a9a9;
@@ -88,13 +92,11 @@ h2 {
 }
 
 .about-author {
-	font-size: 0.8rem;
-	line-height: .5rem;
+	font-size: 0.7rem;
 }
 
-.og-article {
-	font-size: 0.8rem;
-	color: white;
+.og-article-link {
+	font-size: 0.7rem;
 }
 
 .first-bq {
