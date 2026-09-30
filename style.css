@@ -5,6 +5,7 @@
 	--font-body: 'barlow', roboto;
 	--font-heading: 'limelight', anton;
 	--font-size: 1.2rem;
+	--font-weight: 200;
 	--line-height: 1.5;
 	--spacing: 1rem;
 }
@@ -155,18 +156,31 @@ footer{
 }
 
 .main-nav {
-	display: felx;
+	display: flex;
 	gap: var(--spacing);
 	font-size: calc(var(--font-size)*0.7);
-	background-color: #2d2d2d;
+	background-color: #212121;
 	padding-inline: calc(var(--spacing)*10);
-	padding-block: var(--spacing);
+	padding-block: calc(var(--spacing)*1);
 	align-items: center;
+}
+
+.main-nav li {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.main-nav a {
+	color: var(--accent-color);
+	text-decoration: none;
+	display: block;
+	line-height: 1;
 }
 
 .lead-sentence {
 	font-size: calc(var(--font-size)*1.1);
-	font-weight: 200;
+	font-weight: 500;
 }
 
 .lead-sentence dfn {
