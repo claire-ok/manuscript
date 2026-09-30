@@ -54,7 +54,13 @@ header {
 	margin-block-end: calc(var(--spacing)*2);
 }
 
+nav {
+	position: sticky;
+	inset-block-start: 0;
+}
+
 h2 {
+	background-color: var(--bg-color);
 	font-size: calc(var(--font-size)*2);
 	font-weight: 800;
 	margin-block-start: calc(var(--spacing)*6);
@@ -74,7 +80,6 @@ blockquote {
 	border-radius: 0.3rem;
 	padding-block: calc(var(--spacing)*1.5);
 	padding-inline: calc(var(--spacing)*3);
-	padding-block-end: calc(var(--spacing)*3);
 	margin-block: calc(var(--spacing)*3);
 	margin-inline: calc(var(--spacing)*2);
 }
@@ -94,7 +99,7 @@ blockquote cite {
 	display: block;
 	font-weight: 300;
 	font-style: italic;
-	font-family: var(--font-heading);
+	font-family: var(--font-body);
 	font-size: calc(var(--font-size)*0.8);
 	margin-top: var(--spacing);
 }
@@ -131,7 +136,6 @@ mark {
 
 footer{
 	color: var(--text-color);
-	opacity: 50%;
 	font-size: calc(var(--font-size)/1.5);
 	padding-block: calc(var(--spacing)*3);
 	padding-inline: calc(var(--spacing)*10);
@@ -151,7 +155,7 @@ footer{
 }
 
 .main-nav {
-	display: block;
+	display: felx;
 	gap: var(--spacing);
 	font-size: calc(var(--font-size)*0.7);
 	background-color: #2d2d2d;
@@ -191,3 +195,14 @@ footer{
 	font-size: calc(var(--font-size)*0.6);
 }
 
+#back-to-top {
+	display: block;
+	background-color: var(--accent-color);
+	color: var(--bg-color);
+	inline-size: max-content;
+	padding-inline: var(--spacing);
+	border-radius: 0.8rem;
+	position: fixed;
+	inset-block-end: var(--spacing);
+	inset-inline-end: var(--spacing);
+}
