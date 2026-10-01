@@ -18,19 +18,17 @@ html {
 	color: var(--text-color);
 }
 
-article {
-	padding-inline: calc(var(--spacing)*10);
-}
-
 * + * {
 	margin-block-start: var(--spacing);
 }
 
 hgroup {
-	margin-block: calc(var(--spacing)*6);
+	margin-block: calc(var(--spacing)*10);
+	margin-inline-start: auto;
+	margin-inline-end: calc(var(--spacing)*2);
 	font-family: var(--font-heading);
-	text-align: center;
-	color: var(--text-color);
+	text-align: right;
+	color: white;
 }
 
 hr {
@@ -38,8 +36,8 @@ hr {
 	border: none;
 	margin-block-start: calc(var(--spacing)*3);
 	border-block-start: calc(var(--spacing)*0.7) solid;
-	color: var(--text-color);
-	text-align: center;
+	color: var(--accent-color);
+	text-align: right;
 	height: calc(var(--spacing)*0.7);
 }
 
@@ -51,26 +49,26 @@ hr::after {
 	top: calc(var(--spacing)*-5);
 }
 
-header {
-	margin-block-end: calc(var(--spacing)*2);
-}
-
 nav {
 	position: sticky;
-	inset-block-start: 0;
+	inset-block-start: calc(var(--spacing)*2);
+	inset-inline-start: calc(var(--spacing)*2);
+	width: fit-content;
 }
 
 h2 {
-	background-color: var(--bg-color);
 	font-size: calc(var(--font-size)*2);
 	font-weight: 800;
-	margin-block-start: calc(var(--spacing)*6);
 	color: var(--text-color);
 }
 
 a {
 	text-decoration: underline;
 	color: var(--text-color);
+}
+
+article {
+	max-inline-size: 70ch;
 }
 
 blockquote {
@@ -87,6 +85,8 @@ blockquote {
 
 blockquote:first-of-type {
 	color: var(--text-color);
+	font-family: var(--font-body);
+	font-weight: calc(var(--font-weight)*2.5);
 	background-color: transparent;
 	border-radius: 0;
 	padding-block: 0;
@@ -138,49 +138,60 @@ mark {
 footer{
 	color: var(--text-color);
 	font-size: calc(var(--font-size)/1.5);
-	padding-block: calc(var(--spacing)*3);
-	padding-inline: calc(var(--spacing)*10);
+	padding-block: calc(var(--spacing)*2);
+	padding-inline: calc(var(--spacing)*2);
+}
+
+#article {
+	margin-inline-start: calc(var(--spacing)*9);
+}
+
+#response {
+	color: var(--text-color);
+	margin-inline-end: calc(var(--spacing)*5);
+	margin-inline-start: auto;
+	padding-block: calc(var(--spacing)*5);
 }
 
 .title-top {
 	display: block;
 	font-size: 10rem;
 	display: inline-block;
-	align-items: center;
+	align-items: right;
 	line-height: calc(var(--line-height)/2);
 }
 
-.title-bottom {
-	font-size: calc(var(--font-size)*5);
-	display: inline-block;
-}
-
 .main-nav {
-	display: flex;
-	gap: var(--spacing);
 	font-size: calc(var(--font-size)*0.7);
-	background-color: #212121;
-	padding-inline: calc(var(--spacing)*10);
-	padding-block: calc(var(--spacing)*1);
 	align-items: center;
 }
 
 .main-nav li {
-	margin: 0;
-	padding: 0;
-	line-height: 1;
+	padding: calc(var(--spacing)*0.7);
+	margin-block-end: var(--spacing);
+	background-color: var(--bg-color);
+	border-radius: 3rem;
+	border: 0.1rem solid var(--accent-color);
+
+	text-align: center;
 }
 
 .main-nav a {
-	color: var(--accent-color);
+	color: var(--text-color);
 	text-decoration: none;
 	display: block;
-	line-height: 1;
+
+	transition: color 0.4s ease-in-out;
+}
+
+.main-nav a:hover {
+	color: var(--accent-color);
 }
 
 .lead-sentence {
-	font-size: calc(var(--font-size)*1.1);
-	font-weight: 500;
+	display: block;
+	margin: calc(var(--spacing)*2);
+	font-size: calc(var(--font-size)*1.2);
 }
 
 .lead-sentence dfn {
@@ -194,7 +205,8 @@ footer{
 
 .og-article-author {
 	font-size: calc(var(--font-size)*0.8);
-	margin-block: calc(var(--spacing)*2);
+	margin-block-start: var(--spacing);
+	margin-block-end: calc(var(--spacing)*3.5);
 	border-style: solid;
 	border: 0.05rem solid #a9a9a9;
 	border-radius: 0.8rem;
@@ -217,6 +229,6 @@ footer{
 	padding-inline: var(--spacing);
 	border-radius: 0.8rem;
 	position: fixed;
-	inset-block-end: var(--spacing);
-	inset-inline-end: var(--spacing);
+	inset-block-end: calc(var(--spacing)*2);
+	inset-inline-end: calc(var(--spacing)*2);
 }
