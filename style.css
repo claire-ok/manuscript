@@ -22,9 +22,15 @@ html {
 	margin-block-start: var(--spacing);
 }
 
+header nav {
+	position: fixed;
+	inset-block-start: calc(var(--spacing)*2);
+	inset-inline-start: calc(var(--spacing)*2);
+	width: fit-content;
+}
+
 hgroup {
 	margin-block: calc(var(--spacing)*10);
-	margin-inline-start: auto;
 	margin-inline-end: calc(var(--spacing)*2);
 	font-family: var(--font-heading);
 	text-align: right;
@@ -32,13 +38,16 @@ hgroup {
 }
 
 hr {
-	font-size: calc(var(--font-size)*5);
 	border: none;
 	margin-block-start: calc(var(--spacing)*3);
 	border-block-start: calc(var(--spacing)*0.7) solid;
+	margin-inline-start: auto;
+	margin-inline-end: var(--spacing);
+	height: calc(var(--spacing)*0.7);
+
+	font-size: calc(var(--font-size)*5);
 	color: var(--accent-color);
 	text-align: right;
-	height: calc(var(--spacing)*0.7);
 }
 
 hr::after {
@@ -49,17 +58,15 @@ hr::after {
 	top: calc(var(--spacing)*-5);
 }
 
-nav {
-	position: sticky;
-	inset-block-start: calc(var(--spacing)*2);
-	inset-inline-start: calc(var(--spacing)*2);
-	width: fit-content;
+header p {
+	margin-block-end: calc(var(--spacing)*0.2);
 }
 
 h2 {
 	font-size: calc(var(--font-size)*2);
 	font-weight: 800;
 	color: var(--text-color);
+	margin-block-start: 0;
 }
 
 a {
@@ -142,6 +149,10 @@ footer{
 	padding-inline: calc(var(--spacing)*2);
 }
 
+#website-start {
+	margin-inline-start: auto;
+}
+
 #article {
 	margin-inline-start: calc(var(--spacing)*9);
 }
@@ -153,17 +164,12 @@ footer{
 	padding-block: calc(var(--spacing)*5);
 }
 
-.title-top {
-	display: block;
-	font-size: 10rem;
-	display: inline-block;
-	align-items: right;
-	line-height: calc(var(--line-height)/2);
+.header-wrapper {
+	display: flex;
 }
 
 .main-nav {
 	font-size: calc(var(--font-size)*0.7);
-	align-items: center;
 }
 
 .main-nav li {
@@ -188,6 +194,13 @@ footer{
 	color: var(--accent-color);
 }
 
+.title-top {
+	display: block;
+	font-size: 10rem;
+	text-align: right;
+	line-height: calc(var(--line-height)/2);
+}
+
 .lead-sentence {
 	display: block;
 	margin: calc(var(--spacing)*2);
@@ -207,7 +220,6 @@ footer{
 	font-size: calc(var(--font-size)*0.8);
 	margin-block-start: var(--spacing);
 	margin-block-end: calc(var(--spacing)*3.5);
-	border-style: solid;
 	border: 0.05rem solid #a9a9a9;
 	border-radius: 0.8rem;
 	padding: calc(var(--spacing)*2);
@@ -219,6 +231,15 @@ footer{
 
 .og-article-link {
 	font-size: calc(var(--font-size)*0.6);
+}
+
+.sub-title {
+	color: var(--accent-color);
+	opacity: 0.5;
+}
+
+.highlight-text {
+	color: var(--accent-color);
 }
 
 #back-to-top {

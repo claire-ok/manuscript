@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Limelight&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<header>
+		<header class="header-wrapper">
 			<section id="website-start">
 				<hgroup>
 					<h1>
@@ -20,18 +20,19 @@
 					</h1>
 				</hgroup>
 			</section>
+		<nav>
+			<ul class="main-nav">
+				<li>
+					<a href="#article">Article</a></li>
+				<li>
+					<a href="#response">Response</a></li>
+			</ul>
+		</nav>
 		</header>
-				<nav>
-					<ul class="main-nav">
-						<li>
-							<a href="#article">Article</a></li>
-						<li>
-							<a href="#response">Response</a></li>
-					</ul>
-				</nav>
 		<main>
 			<article id="article">
 				<header>
+					<p class="sub-title">Article</p>
 					<h2>THIS IS AUTO-TUNE TYPOGRAPHY</h2>
 					<section class="author">written by Silvia Sfligiotti
 				</header>
@@ -88,12 +89,14 @@
 			<!--This is my response-->
 			<article id="response">
 				<header>
+					<p class="sub-title">My Response</p>
 					<h2>Changing How We Consume Information</h2>
 				</header>
 				<section>
 					<p>Silvia Sfligiotti’s article, <em>“THIS IS AUTO-TUNE TYPOGRAPHY”</em>, points out how repetitive and predictable typography has become today. She compares the trend of using plain uppercase sans-serif fonts to audio Auto-Tune, arguing that it flattens the unique voice of a text and turns design into a lazy habit. <mark>However, from a communication design perspective, this trend isn’t just about lazy choices</mark>—it is closely tied to how our habits of consuming information have changed in the digital age.</p>
 
-					<p>Today, we consume information and text quite differently than we did in the print era. We quickly scan through content on mobile screens, social media feeds, and websites. Because text needs to be easily readable and fit various screen sizes, a simple and standardized typographic style naturally became popular. In a way, <em>"Auto-Tune Typography"</em> grew out of a practical need for efficiency in fast-moving digital spaces.</p>
+					<p>
+						<span class="highlight-text">We consume information and text quite differently than we did in the print era.</span> We quickly scan through content on mobile screens, social media feeds, and websites. Because text needs to be easily readable and fit various screen sizes, a simple and standardized typographic style naturally became popular. In a way, <em>"Auto-Tune Typography"</em> grew out of a practical need for efficiency in fast-moving digital spaces.</p>
 
 					<p>The real problem arises when designers get too comfortable with these easy solutions. As media and reading habits change, design needs to evolve as well. Instead of dropping text into static, default templates, typography should adapt to modern platforms through dynamic methods like motion typography, variable fonts, and interactive design.</p>
 
